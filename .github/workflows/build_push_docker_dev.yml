@@ -24,7 +24,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./server
           file: ./server/Dockerfile
           target: builder
           push: true
@@ -48,7 +48,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./machine-learning
           file: ./machine-learning/Dockerfile
           target: builder
           push: true
